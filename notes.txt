@@ -1,2 +1,14 @@
 What is a Git repository?
 A branching, historical timeline, with commits, and connections between those commits, and labels for each commit.
+
+Ways to refer to commits:
+
+HEAD: currently checked out commit
+Commit ID: uniquely identifies a commit. Never changes.
+Branch name: e.g., 'Master'
+HEAD^^: 2 commits before HEAD
+HEAD~2: 2 commits before HEAD
+
+Diagnostic commands:
+git status: shows us add/committed files, what branch we're on, other info
+git log: shows info about the current commit, and all parents of that commit
