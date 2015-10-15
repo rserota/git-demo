@@ -1,2 +1,2 @@
 What is a Git repository?
-A branching, historical timeline, with commits, and connections between those commits.
+A branching, historical timeline, with commits, and connections between those commits, and labels for each commit.
