@@ -1,6 +1,9 @@
 What is a Git repository?
 A branching, historical timeline, with commits, and connections between those commits, and labels for each commit.
 
+"Git is easy, all you have to know is <xyz>"
+xyz = everything is a commit, or a label for a commit.
+
 Ways to refer to commits:
 
 HEAD: currently checked out commit
@@ -12,3 +15,42 @@ HEAD~2: 2 commits before HEAD
 Diagnostic commands:
 git status: shows us add/committed files, what branch we're on, other info
 git log: shows info about the current commit, and all parents of that commit
+git diff: compares any 2 commits, e.g.: git diff HEAD HEAD~1
+
+Going back in time:
+git checkout <commit label>: e.g. git checkout HEAD~1
+git checkout <commit label> <folder>: Modifies <folder> to look the way it did at <commit label>.
+git reset --hard <commit label>: deletes all commits between the current commit and <commit label>. This rewrites history, so it's dangerous to do this (can't be undone!)
+
+Branching:
+
+git branch: view branches
+git branch <branch name>: create a new branch named <branch name>
+git checkout <branch name>: switch the currently checked out branch to <branch name>
+git merge <commit name>: take changes from HEAD and apply them to <branch name>
+git branch -d <branch name>: deletes the named branch
+
+3 different types of merges:
+fast-forward: simply moves the branch label from HEAD to the named branch. Does NOT create a new commit.
+Automatic-merge: Git automatically creates a new commit, with two parents.
+Manual-merge: Git could not automatically create a new commit. You have to clean up merge conflicts, and then manually commit.
+
+working with remotes:
+
+git remote add <remote name> <remote URL>: adds a a remote.
+git push <remote name> <local branch>:<remote branch>
+git remote: names all the remotes in the repo
+git pull <remote name> <branch name>: apply changes from the remote branch to the local branch.
+git pull is actually 2 commands: `git fetch <remote name> <branch name>` followed by `git merge remotes/<remote name>/<branch name>`
+
+
+Git Flow
+
+2 different types of branches
+    permanent branches
+        master
+        develop
+    temporary branches
+        feature, e.g. feature/chatSidebar. Branch off of develop, merge back into develop
+        bugfix, e.g. bugfix/brokenOnOperaMini. Branch off of develop, merge back into develop
+        hotfix, e.g. hotfix/everythingIsOnFire. Branch off of Master, merge back into master and develop

@@ -1,0 +1,530 @@
+Last login: Thu Oct 15 14:02:56 on ttys001
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: ls
+notes.txt stuff.txt
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git status
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#   modified:   notes.txt
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git add -A
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git commit -m '...'
+[master ce26f6c] ...
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git status
+# On branch master
+nothing to commit, working directory clean
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git log
+commit ce26f6cb5182f13a1801fb2ab3536bc23568c9d4
+Author: rserota <raphael.serota@gmail.com>
+Date:   Thu Oct 15 14:31:51 2015 -0600
+
+    ...
+
+commit 540d52892af37c458493b152dbd14f123eb5582b
+Author: rserota <raphael.serota@gmail.com>
+Date:   Thu Oct 15 14:25:35 2015 -0600
+
+    gitignore
+
+commit e2afc5fdf6de1f8f65b75a89e007c7a6e55ff885
+Author: rserota <raphael.serota@gmail.com>
+Date:   Thu Oct 15 14:18:01 2015 -0600
+
+    second commit
+
+commit 6e7c40a0835b799d5880520baadf15e41f4ab2f3
+Author: rserota <raphael.serota@gmail.com>
+Date:   Thu Oct 15 14:09:40 2015 -0600
+
+    first commit!
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git checkout HEAD~2
+Note: checking out 'HEAD~2'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at e2afc5f... second commit
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: ls
+notes.txt stuff.txt
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: less stuff.txt 
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: checkout HEAD~1
+-bash: checkout: command not found
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git checkout HEAD~1
+Previous HEAD position was e2afc5f... second commit
+HEAD is now at 6e7c40a... first commit!
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: less stuff.txt 
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git checkout master
+Previous HEAD position was 6e7c40a... first commit!
+Switched to branch 'master'
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git status
+# On branch master
+nothing to commit, working directory clean
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git log
+commit ce26f6cb5182f13a1801fb2ab3536bc23568c9d4
+Author: rserota <raphael.serota@gmail.com>
+Date:   Thu Oct 15 14:31:51 2015 -0600
+
+    ...
+
+commit 540d52892af37c458493b152dbd14f123eb5582b
+Author: rserota <raphael.serota@gmail.com>
+Date:   Thu Oct 15 14:25:35 2015 -0600
+
+    gitignore
+
+commit e2afc5fdf6de1f8f65b75a89e007c7a6e55ff885
+Author: rserota <raphael.serota@gmail.com>
+Date:   Thu Oct 15 14:18:01 2015 -0600
+
+    second commit
+
+commit 6e7c40a0835b799d5880520baadf15e41f4ab2f3
+Author: rserota <raphael.serota@gmail.com>
+Date:   Thu Oct 15 14:09:40 2015 -0600
+
+    first commit!
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: less stu
+stu: No such file or directory
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: less stuff.txt 
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git checkout HEAD~3 .
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git log
+commit ce26f6cb5182f13a1801fb2ab3536bc23568c9d4
+Author: rserota <raphael.serota@gmail.com>
+Date:   Thu Oct 15 14:31:51 2015 -0600
+
+    ...
+
+commit 540d52892af37c458493b152dbd14f123eb5582b
+Author: rserota <raphael.serota@gmail.com>
+Date:   Thu Oct 15 14:25:35 2015 -0600
+
+    gitignore
+
+commit e2afc5fdf6de1f8f65b75a89e007c7a6e55ff885
+Author: rserota <raphael.serota@gmail.com>
+Date:   Thu Oct 15 14:18:01 2015 -0600
+
+    second commit
+
+commit 6e7c40a0835b799d5880520baadf15e41f4ab2f3
+Author: rserota <raphael.serota@gmail.com>
+Date:   Thu Oct 15 14:09:40 2015 -0600
+
+    first commit!
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#   modified:   notes.txt
+#   modified:   stuff.txt
+#
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: less stuff.txt 
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#   modified:   notes.txt
+#   modified:   stuff.txt
+#
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git add -A
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git commit -m 'checkout the past'
+[master 7f147b5] checkout the past
+ 2 files changed, 2 insertions(+), 19 deletions(-)
+ rewrite notes.txt (86%)
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: ls
+notes.txt stuff.txt
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git log
+commit 7f147b5d100bb28a04e6d8c4d9cf1d3a5b8b3716
+Author: rserota <raphael.serota@gmail.com>
+Date:   Thu Oct 15 14:45:41 2015 -0600
+
+    checkout the past
+
+commit ce26f6cb5182f13a1801fb2ab3536bc23568c9d4
+Author: rserota <raphael.serota@gmail.com>
+Date:   Thu Oct 15 14:31:51 2015 -0600
+
+    ...
+
+commit 540d52892af37c458493b152dbd14f123eb5582b
+Author: rserota <raphael.serota@gmail.com>
+Date:   Thu Oct 15 14:25:35 2015 -0600
+
+    gitignore
+
+commit e2afc5fdf6de1f8f65b75a89e007c7a6e55ff885
+Author: rserota <raphael.serota@gmail.com>
+Date:   Thu Oct 15 14:18:01 2015 -0600
+
+    second commit
+
+commit 6e7c40a0835b799d5880520baadf15e41f4ab2f3
+Author: rserota <raphael.serota@gmail.com>
+Date:   Thu Oct 15 14:09:40 2015 -0600
+
+    first commit!
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: 
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: ls
+notes.txt stuff.txt
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: less stuff.txt 
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git reset --hard HEAD~2
+HEAD is now at 540d528 gitignore
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git log
+commit 540d52892af37c458493b152dbd14f123eb5582b
+Author: rserota <raphael.serota@gmail.com>
+Date:   Thu Oct 15 14:25:35 2015 -0600
+
+    gitignore
+
+commit e2afc5fdf6de1f8f65b75a89e007c7a6e55ff885
+Author: rserota <raphael.serota@gmail.com>
+Date:   Thu Oct 15 14:18:01 2015 -0600
+
+    second commit
+
+commit 6e7c40a0835b799d5880520baadf15e41f4ab2f3
+Author: rserota <raphael.serota@gmail.com>
+Date:   Thu Oct 15 14:09:40 2015 -0600
+
+    first commit!
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: ls
+notes.txt stuff.txt
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git branch
+* master
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git branch newThing
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git branch
+* master
+  newThing
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git checkout newThing
+Switched to branch 'newThing'
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git branch
+  master
+* newThing
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: less stuff.txt 
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: vim stuff.txt 
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git status
+# On branch newThing
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#   modified:   stuff.txt
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git add -A
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git commit -m 'new stuff'
+[newThing 0f20254] new stuff
+ 1 file changed, 1 insertion(+)
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: less stuff.txt 
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git checkout master
+Switched to branch 'master'
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: less stuff.txt 
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git checkout newThing
+Switched to branch 'newThing'
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: less stuff.txt 
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git branch
+  master
+* newThing
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git checkout master
+Switched to branch 'master'
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git checkout newThing
+Switched to branch 'newThing'
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git merge master
+Already up-to-date.
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git branch
+  master
+* newThing
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: less stuff.txt 
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git checkout master
+Switched to branch 'master'
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git merge newThing
+Updating 540d528..0f20254
+Fast-forward
+ stuff.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: ls
+notes.txt stuff.txt
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git branch
+* master
+  newThing
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: vim stuff.txt 
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git add -A
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git commit -m 'mastery!'
+[master ad7b784] mastery!
+ 1 file changed, 1 insertion(+)
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git checkout newThing
+Switched to branch 'newThing'
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: ls
+notes.txt stuff.txt
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: vim stuff.txt 
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git branch
+  master
+* newThing
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git merge master
+Updating 0f20254..ad7b784
+error: Your local changes to the following files would be overwritten by merge:
+    stuff.txt
+Please, commit your changes or stash them before you can merge.
+Aborting
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: less stuff.txt 
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git add -A
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git commit -m '...'
+[newThing fe5ff9b] ...
+ 1 file changed, 1 insertion(+)
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git merge master
+Auto-merging stuff.txt
+CONFLICT (content): Merge conflict in stuff.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: vim stuff.txt 
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git status
+# On branch newThing
+# You have unmerged paths.
+#   (fix conflicts and run "git commit")
+#
+# Unmerged paths:
+#   (use "git add <file>..." to mark resolution)
+#
+#   both modified:      stuff.txt
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git add -A
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git commit -m 'resolved merge conflicts'
+[newThing 87728f3] resolved merge conflicts
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git checkout master
+Switched to branch 'master'
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git merge newThing
+Updating ad7b784..87728f3
+Fast-forward
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git branch temporary
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git branch
+* master
+  newThing
+  temporary
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git branch -d temporary
+Deleted branch temporary (was 87728f3).
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git banch
+git: 'banch' is not a git command. See 'git --help'.
+
+Did you mean this?
+    branch
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git branch
+* master
+  newThing
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git remote add origin https://github.com/rserota/git-demo.git
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git push origin master:master
+Counting objects: 22, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (18/18), done.
+Writing objects: 100% (22/22), 1.88 KiB | 0 bytes/s, done.
+Total 22 (delta 7), reused 0 (delta 0)
+To https://github.com/rserota/git-demo.git
+ * [new branch]      master -> master
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git push origin newThing
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/rserota/git-demo.git
+ * [new branch]      newThing -> newThing
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git push origin :newThing
+To https://github.com/rserota/git-demo.git
+ - [deleted]         newThing
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git branch
+* master
+  newThing
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git remote
+origin
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git remote show
+origin
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git remote show origin
+* remote origin
+  Fetch URL: https://github.com/rserota/git-demo.git
+  Push  URL: https://github.com/rserota/git-demo.git
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git branch
+* master
+  newThing
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git pull origin master
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/rserota/git-demo
+ * branch            master     -> FETCH_HEAD
+   87728f3..bb0b20f  master     -> origin/master
+Updating 87728f3..bb0b20f
+Fast-forward
+ stuff.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: ls
+notes.txt stuff.txt
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: less stuff.txt 
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git branch -a
+* master
+  newThing
+  remotes/origin/master
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git fetch origin
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git fetch origin master
+From https://github.com/rserota/git-demo
+ * branch            master     -> FETCH_HEAD
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git checkout remotes/origin/master
+Note: checking out 'remotes/origin/master'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at bb0b20f... Update stuff.txt
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git checkout master
+Switched to branch 'master'
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git branch -a
+* master
+  newThing
+  remotes/origin/master
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git merge remotes/origin/master
+Already up-to-date.
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git diff remotes/origin/master
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: git log
+commit bb0b20f827abe32a14c41b30a53f2787a6a69cc8
+Author: Raphael Serota <rserota@users.noreply.github.com>
+Date:   Thu Oct 15 15:53:43 2015 -0600
+
+    Update stuff.txt
+
+commit 87728f3ae99e2e99c21c7e9f2a4222e056260863
+Merge: fe5ff9b ad7b784
+Author: rserota <raphael.serota@gmail.com>
+Date:   Thu Oct 15 15:36:33 2015 -0600
+
+    resolved merge conflicts
+
+commit fe5ff9b4363267119db307819db4cf06af193af5
+Author: rserota <raphael.serota@gmail.com>
+Date:   Thu Oct 15 15:30:54 2015 -0600
+
+    ...
+
+commit ad7b784d8a00aa305266f9dfe649c4889d3c3c93
+Author: rserota <raphael.serota@gmail.com>
+Date:   Thu Oct 15 15:27:28 2015 -0600
+
+~/projects/refactorU/fall2015-demo-code/week7/git-II: 
